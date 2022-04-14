@@ -1,0 +1,85 @@
+Verificar a versao do python:
+python --version
+R-> Python 3.9.7
+
+Para mudar setar uma nova versão do python:
+alias python=python3.7
+
+Instalando o ambiente virtual:
+pip install virtualenv
+
+Criando o ambiente virtual:
+virtualenv nome versão do python
+ex.: virtualenv ambvir --python=python3.9
+-> é criado uma pasta com o nome que foi dado no caso ambvir
+
+Ativar o ambiente virtual que acabamos de criar:
+source ambvir/bin/activate
+-> aparece o nome do ambiente no cursor (ambvir)
+
+Comando para mostrar todas as bibliotecas estaladas:
+pip freeze
+
+Para desativar o ambiente virtual:
+deactivate
+
+
+Instalação do Flask:
+pip install Flask
+
+Instalação do Flask-Restful:
+pip install Flask-Restful
+
+Instalando o SQLAlchemy:
+pip install Flask-SQLAlchemy
+
+
+{
+    "hoteis": [
+        {
+            "hotel_id": "bravo",
+            "nome": "Bravo Hotel",
+            "estrelas": 4.9,
+            "diaria": 320.7,
+            "cidade": "Nova Iguaçu"
+        },
+        {
+            "hotel_id": "alpha",
+            "nome": "Alpha Hotel",
+            "estrelas": 5.0,
+            "diaria": 710.0,
+            "cidade": "Santa Catarina"
+        },
+        {
+            "hotel_id": "echo",
+            "nome": "Echo Hotel",
+            "estrelas": 4.9,
+            "diaria": 490.8,
+            "cidade": "Colatina"
+        },
+        {
+            "hotel_id": "omicron",
+            "nome": "Omicron Hotel",
+            "estrelas": 4.9,
+            "diaria": 550.0,
+            "cidade": "Juiz de Fora"
+        }
+    ]
+}
+
+
+
+Intalando o Flask-JWT-Extended:
+pip install Flask-JWT-Extended
+
+
+
+Houve uma atualização da biblioteca flask_jwt_extended, e uma série de coisas
+foram renomeadas. Para acompanhar a aula com a biblioteca atualizada você
+precisará fazer as seguintes adaptações:
+
+- Substitua @jwt_required por ===> @jwt_required()
+
+- Renomeie @jwt.token_in_blacklist_loader para ===>  @jwt.token_in_blocklist_loader
+
+- Substitua get_raw_jwt por ===> get_jwt
